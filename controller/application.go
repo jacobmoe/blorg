@@ -9,7 +9,7 @@ import (
 )
 
 func Home(render render.Render) {
-	render.HTML(200, "home", "there")
+	render.HTML(200, "home", "THE BLORG")
 }
 
 func Blog() string {
