@@ -1,15 +1,20 @@
 package controller
 
 import (
-	"github.com/codegangsta/martini"
+	"github.com/go-martini/martini"
 	"github.com/jacobmoe/gorg"
+	"github.com/martini-contrib/render"
 	"io/ioutil"
 	"path/filepath"
 )
 
+func Home(render render.Render) {
+	render.HTML(200, "home", "there")
+}
+
 func Blog() string {
 	inPath, _ := filepath.Abs("test/test.org")
-	outPath, _ := filepath.Abs("test/test.html")
+	outPath, _ := filepath.Abs("test/test.json")
 
 	gorg.OrgToHtmlFile(inPath, outPath)
 
