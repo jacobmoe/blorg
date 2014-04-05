@@ -10,7 +10,7 @@ import (
 )
 
 func Home(render render.Render) {
-	render.HTML(200, "home", "THE BLORG")
+	render.HTML(200, "home", "Hello :)")
 }
 
 func Blog(render render.Render) {
@@ -21,7 +21,7 @@ func Blog(render render.Render) {
 
 	html, _ := ioutil.ReadFile(outPath)
 
-	render.HTML(200, "blog", template.HTML(string(html)))
+	render.HTML(200, "blog", template.HTML(html))
 }
 
 func Name(args martini.Params) string {

@@ -8,9 +8,14 @@ div.sidebar {
   margin-top: 20px;
 }
 
-div.header {
-  background: #000;
+div.main-content-body-header {
+  padding: 5px 0 25px;
+  background-color: #ccc;
+  text-align: center;
+}
 
+div.main-content-body-header h1 {
+  font-size: 35px;
 }
 
 img.org-unicorn {
