@@ -1,5 +1,19 @@
-div.body-content {
+div.row.body-content {
   max-width: 1200px;
   height: 100%;
   margin: auto;
 }
+
+div.sidebar {
+  margin-top: 20px;
+}
+
+div.header {
+  background: #000;
+
+}
+
+img.org-unicorn {
+  width: 90px;
+}
+

@@ -14,8 +14,8 @@ func Home(render render.Render) {
 }
 
 func Blog(render render.Render) {
-	inPath, _ := filepath.Abs("test/test.org")
-	outPath, _ := filepath.Abs("test/test.json")
+	inPath, _ := filepath.Abs("test_files/test.org")
+	outPath, _ := filepath.Abs("test_files/test.html")
 
 	gorg.OrgToHtmlFile(inPath, outPath)
 
