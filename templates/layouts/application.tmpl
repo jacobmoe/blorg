@@ -9,23 +9,27 @@
   <title>the blorg</title>
 
   <link rel="stylesheet" href="/stylesheets/application.css">
-  <link rel="stylesheet" href="/stylesheets/normalize.css">
-  <link rel="stylesheet" href="/stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="/stylesheets/vendor/bootstrap.min.css">
 
   <script src="javascripts/vendor/modernizr.js"></script>
 </head>
 
 <body>
 
+  <div class="container-fluid body-content">
+    <div class="row">
+      <div class="col-sm-3 col-md-2 sidebar">
+        THE NAV
+      </div>
 
-  {{ yield }}
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        {{ yield }}
+      </div>
+    </div>
+  </div>
 
 
-  <script src="javascripts/vendor/jquery.js"></script>
-  <script src="javascripts/foundation.min.js"></script>
-  <script>
-    $(document).foundation();
-  </script>
-
+  <script src="javascripts/vendor/jquery-2.1.0.min.js"></script>
+  <script src="javascripts/vendor/bootstrap.min.js"></script>
 </body>
 </html>

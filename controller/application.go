@@ -4,6 +4,7 @@ import (
 	"github.com/go-martini/martini"
 	"github.com/jacobmoe/gorg"
 	"github.com/martini-contrib/render"
+	"html/template"
 	"io/ioutil"
 	"path/filepath"
 )
@@ -12,7 +13,7 @@ func Home(render render.Render) {
 	render.HTML(200, "home", "THE BLORG")
 }
 
-func Blog() string {
+func Blog(render render.Render) {
 	inPath, _ := filepath.Abs("test/test.org")
 	outPath, _ := filepath.Abs("test/test.json")
 
@@ -20,7 +21,7 @@ func Blog() string {
 
 	html, _ := ioutil.ReadFile(outPath)
 
-	return string(html)
+	render.HTML(200, "blog", template.HTML(string(html)))
 }
 
 func Name(args martini.Params) string {
