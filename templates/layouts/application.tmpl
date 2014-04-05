@@ -3,17 +3,29 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
-  <title>Jacob Moeller</title>
   <meta name="description" content="Jacob Moeller">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="styles.css">
+  <title>the blorg</title>
+
+  <link rel="stylesheet" href="/stylesheets/application.css">
+  <link rel="stylesheet" href="/stylesheets/normalize.css">
+  <link rel="stylesheet" href="/stylesheets/foundation.min.css">
+
+  <script src="javascripts/vendor/modernizr.js"></script>
 </head>
 
 <body>
-  <h1>HELLO!!!!!!!!!!!!!!!!!!!!!</h1>
+
 
   {{ yield }}
+
+
+  <script src="javascripts/vendor/jquery.js"></script>
+  <script src="javascripts/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
 
 </body>
 </html>

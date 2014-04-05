@@ -8,11 +8,14 @@ import (
 func Run() {
 	server := martini.Classic()
 
-	// setup renderer
+	// setup renderer middleware
 	server.Use(render.Renderer(render.Options{
 		Layout:     "layouts/application",
 		IndentJSON: true,
 	}))
+
+	// serve static assets from "assets" in addition to "public"
+	server.Use(martini.Static("assets"))
 
 	mapRoutes(server)
 
