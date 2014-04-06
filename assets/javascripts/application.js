@@ -4,7 +4,7 @@ var NavItemCollection = Backbone.Collection.extend({
 });
 
 var PostCollection = Backbone.Collection.extend({
-  url: '/api/blog'
+  url: '/api/posts'
 });
 
 // ---- views ----------------------------------------------------------------
