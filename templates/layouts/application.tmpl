@@ -30,9 +30,34 @@
         </div>
 
         {{ yield }}
+
       </div>
     </div>
   </div>
+
+  <script type="text/template" id="posts-template">
+    <div class="posts">
+
+      <% _.each(posts, function (post) { %>
+        <% _.each(post.get('subtrees'), function (subtree) { %>
+          <% _.each(subtree.nodes, function (node) { %>
+            <div class="post">
+              <h<%= node.position %> class="headline">
+                <%= node.headline %>
+              </div>
+              <div class="section">
+                <% _.each(node.sections, function (p) { %>
+                  <p><%= p %></p>
+                <% }); %>
+              </div>
+            </div>
+          <% }); %>
+        <% }); %>
+      <% }); %>
+
+    </div>
+  </script>
+
 
 
   <script src="javascripts/vendor/jquery-2.1.0.min.js"></script>
