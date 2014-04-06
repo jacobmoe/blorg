@@ -11,7 +11,8 @@ var PostCollection = Backbone.Collection.extend({
 var NavSidebar = Backbone.View.extend({
   el: '.nav-sidebar',
   render: function () {
-    this.$el.html('NEW CONTENT');
+    var template = _.template($('#nav-sidebar-template').html(), {});
+    this.$el.html(template);
   }
 });
 
@@ -23,9 +24,8 @@ var PostsView = Backbone.View.extend({
     posts.fetch({
       success: function (posts) {
         var template = _.template($('#posts-template').html(), {
-          posts:
-            posts.models
-          })
+          posts: posts.models
+        })
         _this.$el.html(template)
       }
     });

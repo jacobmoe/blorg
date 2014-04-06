@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 )
 
-func BlogShow(render render.Render) {
+func PostIndex(render render.Render) {
 	inPath, _ := filepath.Abs("test_files/test.org")
 
 	tree := gorg.TreeFromFile(inPath)
