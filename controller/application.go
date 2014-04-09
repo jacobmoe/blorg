@@ -3,7 +3,8 @@ package controller
 import (
 	"github.com/go-martini/martini"
 	"github.com/jacobmoe/gorg"
-	"github.com/martini-contrib/render"
+	// "github.com/martini-contrib/render"
+	"github.com/jacobmoe/render"
 	"html/template"
 	"io/ioutil"
 	"path/filepath"

@@ -2,7 +2,10 @@ package server
 
 import (
 	"github.com/go-martini/martini"
-	"github.com/martini-contrib/render"
+	// "github.com/martini-contrib/render"
+	// "github.com/jacobmoe/blorg/helper"
+	"github.com/jacobmoe/render"
+	"html/template"
 )
 
 func Run() {
@@ -12,6 +15,13 @@ func Run() {
 	server.Use(render.Renderer(render.Options{
 		Layout:     "layouts/application",
 		IndentJSON: true,
+		Funcs: []template.FuncMap{
+			{
+				"test": func() string {
+					return "TETETETE"
+				},
+			},
+		},
 	}))
 
 	// serve static assets from "assets" in addition to "public"

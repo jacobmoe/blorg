@@ -9,21 +9,18 @@ type Page struct {
 
 // gorg made no assumptions about the structure of the org-mode file
 // here, we are assuming:
-// - every subtree contains at most 3 levels
 // - the page name is a level-1 headline (*)
 // - the title of the post is a level-2 headline (**)
 // - the date of the post is a level-3 headline (***)
 // - the body of the post is contained under the date
-func GetPagesFromTree(tree *gorg.Tree, from int, to int) []*Page {
+func PagesFromTree(tree *gorg.Tree) []*Page {
 	var pages []*Page
 
-	page := &Page{}
-	post := &Post{}
-
 	for _, subtree := range tree.Subtrees {
+		page := &Page{}
+		post := &Post{}
 
 		for _, node := range subtree.Nodes {
-
 			switch node.Position {
 			case 1:
 				page = &Page{Title: subtree.Nodes[0].Headline}
@@ -32,12 +29,11 @@ func GetPagesFromTree(tree *gorg.Tree, from int, to int) []*Page {
 			case 3:
 				post.Date = node.Headline
 				post.Section = node.Section
-
-				page.Posts = append(page.Posts, post)
-				pages = append(pages, page)
 			}
-
 		}
+
+		page.Posts = append(page.Posts, post)
+		pages = append(pages, page)
 	}
 
 	return pages
