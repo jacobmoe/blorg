@@ -17,15 +17,10 @@
   <div class="container-fluid">
     <div class="row body-content">
       <div class="col-sm-2 sidebar">
-        <img class="org-unicorn" src="images/org-mode-unicorn-logo.png" />
-        <ul class="nav nav-sidebar">
-          <li><a href="/">Home</a></li>
-          <li class="active"><a href="/blog">Blog</a></li>
-        </ul> 
+        {{template "sidebar"}}
       </div>
 
       <div class="col-sm-10 main">
-        <h1>{{}}</h1>
         <div class="main-content-body-header">
           <h1>THE BLORG!</h1>
         </div>
@@ -35,13 +30,6 @@
       </div>
     </div>
   </div>
-
-  <script type="text/template" id="nav-sidebar-template">
-    <li><a href="#/first">First</a></li>
-    <li><a href="#/second">Second</a></li>
-    <li><a href="#/third">Third</a></li>
-    <li><a href="#/fourth">Fourth</a></li>
-  </script>
 
   <script type="text/template" id="posts-template">
     <div class="posts">
