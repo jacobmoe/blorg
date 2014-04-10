@@ -3,9 +3,8 @@
 <img class="org-unicorn" src="images/org-mode-unicorn-logo.png" />
 <ul class="nav nav-sidebar">
   <li><a href="/">Home</a></li>
-  <li class="active"><a href="/blog">Blog</a></li>
-  {{range (. | sectionTitles)}}
-    <li><a href="/blog">{{.}}</a></li>
+  {{range $index, $title := sectionTitles}}
+    <li><a href="#/sections/{{$title | slugify}}">{{$title}}</a></li>
   {{end}}
 </ul> 
 

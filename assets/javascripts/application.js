@@ -50,4 +50,3 @@ router.on('route:home', function () {
 });
 
 Backbone.history.start();
-
