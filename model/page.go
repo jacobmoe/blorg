@@ -30,6 +30,22 @@ func PagesFromTree(tree *gorg.Tree) []*Page {
 				post.Date = node.Headline
 				post.Section = node.Section
 			}
+
+			for _, sst := range subtree.Subtrees {
+				post := &Post{}
+
+				for _, n := range sst.Nodes {
+					switch n.Position {
+					case 2:
+						post.Title = n.Headline
+					case 3:
+						post.Date = n.Headline
+						post.Section = n.Section
+					}
+				}
+
+				page.Posts = append(page.Posts, post)
+			}
 		}
 
 		page.Posts = append(page.Posts, post)
