@@ -21,6 +21,9 @@ define([
     app_router.on('route:postsIndex', function(id) {
       console.log("POSTS INDEX ====> ", id);
 
+      $('ul.sidebar li').removeClass('active');
+      $('ul.sidebar li#' + id).addClass('active');
+
       var postsIndexView = new PostsIndexView({page_id: id});
       postsIndexView.render();
     });
