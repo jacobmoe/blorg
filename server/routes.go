@@ -14,6 +14,7 @@ func mapRoutes(server *martini.ClassicMartini) {
 
 	server.Group("/api", func(apiRoutes martini.Router) {
 		apiRoutes.Get("/pages", api.PageIndex)
+		apiRoutes.Get("/pages/:id", api.PageShow)
 		apiRoutes.Group("/pages/:pageId", func(pageRoutes martini.Router) {
 			pageRoutes.Get("/posts", api.PostIndex)
 		})

@@ -21,6 +21,8 @@ func PagesFromTree(tree *gorg.Tree) []*Page {
 		post := &Post{}
 
 		for _, node := range subtree.Nodes {
+
+			// if there is a single post, this is as deep as the tree gets
 			switch node.Position {
 			case 1:
 				page = &Page{Title: subtree.Nodes[0].Headline}
