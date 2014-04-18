@@ -8,13 +8,13 @@ div.sidebar {
   margin-top: 20px;
 }
 
-div.main-content-body-header {
+div.header {
   padding: 5px 0 25px;
   background-color: #ccc;
   text-align: center;
 }
 
-div.main-content-body-header h1 {
+div.header h1 {
   font-size: 35px;
 }
 

@@ -11,7 +11,7 @@ import (
 )
 
 func Home(render render.Render) {
-	render.HTML(200, "home", "Hello :)")
+	render.HTML(200, "home", "")
 }
 
 func Blog(render render.Render) {

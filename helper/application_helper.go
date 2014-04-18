@@ -17,6 +17,10 @@ func Application() map[string]interface{} {
 		return slugify(title)
 	}
 
+	helper["plus1"] = func(i int) int {
+		return i + 1
+	}
+
 	return helper
 }
 

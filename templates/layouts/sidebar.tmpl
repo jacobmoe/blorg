@@ -4,7 +4,7 @@
 <ul class="nav nav-sidebar">
   <li><a href="/">Home</a></li>
   {{range $index, $title := sectionTitles}}
-    <li><a href="#/sections/{{$title | slugify}}">{{$title}}</a></li>
+    <li><a href="#/pages/{{$index | plus1}}/{{$title | slugify}}">{{$title}}</a></li>
   {{end}}
 </ul> 
 

@@ -8,10 +8,10 @@ define([
   
   var AppRouter = Backbone.Router.extend({
     routes: {
-      ''         : 'home',
-      'pages/:id': 'postsIndex',
-      'posts/:id': 'postsShow', 
-      '*actions' : 'defaultAction'
+      ''               : 'home',
+      'pages/:id/:slug': 'postsIndex',
+      'posts/:id'      : 'postsShow', 
+      '*actions'       : 'defaultAction'
     }
   });
   

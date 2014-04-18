@@ -21,10 +21,16 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
 
 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est labo
+** here's a new post
+*** april 18th, 2014
+today, april left me. she went away. i don't know when she'll come home again. maybe some day. maybe. 
 * About
 ** This is the about section
 *** July 04, 2013
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+** about me
+*** april 18th, 2014
+blah blah blah
 * Projects
 ** super snazzy title
 *** April 07, 2014

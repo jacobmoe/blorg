@@ -20,7 +20,6 @@ define([
 
       posts.fetch({
         success: function (posts) {
-          debugger;
           var template = _.template($('#posts-template').html(), {
             posts: posts.models
           })
