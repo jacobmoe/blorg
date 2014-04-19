@@ -1,9 +1,11 @@
-* Blog
+* Posts
 ** the first post, OMG
 *** April 06, 2014
-![](http://scm-l3.technorati.com/13/08/12/77049/Mars-3.jpg?t=20130812070610)
+![unicorn](http://orgmode.org/img/org-mode-unicorn-logo.svg)
 
-this is where i blorg
+```javascript var s = "JavaScript syntax highlighting"; \n alert(s);```
+
+#### this is where i blorg
 
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
 
@@ -18,6 +20,7 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
 
 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est labo
+
 ** i invented a time machine!
 *** March 31, 1998
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
@@ -48,3 +51,13 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
 blah blah blah blah
 * section
 no title on this one at all
+
+### example code
+
+#+BEGIN_SRC ruby
+
+def some_method
+  puts "OMG I <3 org-mode"
+end
+
+#+END_SRC
