@@ -21,3 +21,7 @@ div.header h1 {
 img.org-unicorn {
   width: 90px;
 }
+
+div.posts div.post img {
+  max-width: 100%;
+}

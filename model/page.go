@@ -1,6 +1,7 @@
 package model
 
 import "github.com/jacobmoe/gorg"
+import "github.com/russross/blackfriday"
 
 type Page struct {
 	Title string  `json:"title"`
@@ -34,7 +35,7 @@ func PagesFromTree(tree *gorg.Tree) []*Page {
 				post.Date = node.Headline
 			}
 
-			sections = append(sections, node.Section...)
+			sections = appendSections(sections, node.Section)
 
 			for _, sst := range subtree.Subtrees {
 				post := &Post{}
@@ -47,7 +48,7 @@ func PagesFromTree(tree *gorg.Tree) []*Page {
 						post.Date = n.Headline
 					}
 
-					sections = append(sections, n.Section...)
+					sections = appendSections(sections, n.Section)
 				}
 
 				post.Section = sections
@@ -62,4 +63,13 @@ func PagesFromTree(tree *gorg.Tree) []*Page {
 	}
 
 	return pages
+}
+
+func appendSections(sections []string, nodeSection []string) []string {
+	for _, s := range nodeSection {
+		section := blackfriday.MarkdownBasic([]byte(s))
+		sections = append(sections, string(section))
+	}
+
+	return sections
 }
