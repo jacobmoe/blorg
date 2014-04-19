@@ -4,16 +4,12 @@ require.config({
     jquery: 'vendor/jquery-2.1.0.min',
     underscore: 'vendor/underscore-1.6.0.min',
     backbone: 'vendor/backbone-1.1.2.min',
-    bootstrap: 'vendor/bootstrap.mins'
+    bootstrap: 'vendor/bootstrap.min',
+    prettify: 'vendor/google-code-prettify/prettify'
   },
   urlArgs: "bust=" +  (new Date()).getTime() // don't use in prod
-
 });
 
-require([
-  // Load our app module and pass it to our definition function
-  'application',
-], function(App){
-  // The "app" dependency is passed in as "App"
+require(['application'], function(App){
   App.initialize();
 });

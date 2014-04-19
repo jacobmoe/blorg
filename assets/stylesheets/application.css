@@ -25,3 +25,7 @@ img.org-unicorn {
 div.posts div.post img {
   max-width: 100%;
 }
+
+div.posts pre {
+  padding: 15px;
+}

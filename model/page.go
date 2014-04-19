@@ -3,6 +3,7 @@ package model
 import "github.com/jacobmoe/gorg"
 import "github.com/russross/blackfriday"
 import "regexp"
+import "strings"
 
 type Page struct {
 	Title string  `json:"title"`
@@ -75,8 +76,8 @@ func appendSections(sections []string, nodeSection []string) []string {
 		// if section is a code block that is structured correctly,
 		// we will find a match plus exactly 4 sub-matches
 		if len(submatches) == 5 {
-			lang := "lang-" + submatches[2]
-			html := "<pre class=\"" + lang + "\"><code>" + submatches[3] + "</code></pre>"
+			lang := strings.TrimSpace("lang-" + submatches[2])
+			html := "<pre class=\"" + lang + "\"><code>" + strings.TrimSpace(submatches[3]) + "</code></pre>"
 			sections = append(sections, html)
 		} else {
 			section := blackfriday.MarkdownCommon([]byte(s))

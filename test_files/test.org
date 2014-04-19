@@ -3,10 +3,6 @@
 *** April 06, 2014
 ![unicorn](http://orgmode.org/img/org-mode-unicorn-logo.svg)
 
-```javascript var s = "JavaScript syntax highlighting"; \n alert(s);```
-
-#### this is where i blorg
-
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
 
 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est lab
@@ -47,17 +43,30 @@ quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa
 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 * section
-** title
-blah blah blah blah
-* section
-no title on this one at all
+** go examples
 
-### example code
+#+BEGIN_SRC go
+
+package example
+
+import "fmt"
+
+func saySomething() {
+  fmt.Println("org-mode rulez!")
+}
+
+#+END_SRC
+** ruby examples
 
 #+BEGIN_SRC ruby
 
-def some_method
-  puts "OMG I <3 org-mode"
+class SomeClass
+
+  def some_method
+    puts "hurray!"
+  end
+
 end
 
 #+END_SRC
+

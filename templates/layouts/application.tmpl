@@ -9,11 +9,11 @@
 
   <title>the blorg</title>
 
-  <link rel="stylesheet" href="/stylesheets/application.css">
   <link rel="stylesheet" href="/stylesheets/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/vendor/prettify_tomorrow-night.css">
+  <link rel="stylesheet" href="/stylesheets/application.css">
 
   <script data-main="javascripts/main" src="javascripts/vendor/require-2.1.11.min.js"></script>
-
 </head>
 
 <body>
@@ -37,10 +37,12 @@
   <script type="text/template" id="posts-template">
     <% _.each(posts, function (post) { %>
       <div class="post">
-        <h1><%= post.get("title") %></h1>
-        <h5><%= post.get("date") %></h5>
+        <div class="page-header">
+          <h1><%= post.get("title") %></h1>
+          <h5><%= post.get("date") %></h5>
+        </div>
         <% _.each(post.get('sections'), function (section) { %>
-          <p><%= section %></p>
+          <%= section %>
         <% }); %>
       </div>
     <% }); %>

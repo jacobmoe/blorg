@@ -2,9 +2,10 @@ define([
   'jquery',
   'underscore',
   'backbone',
+  'prettify',
   'collections/posts_collection',
   'templates/posts/index'
-], function($, _, Backbone, PostsCollection, template) {
+], function($, _, Backbone, prettify, PostsCollection, template) {
 
   var PostsIndex = Backbone.View.extend({
     el: '.posts',
@@ -24,9 +25,19 @@ define([
             posts: posts.models
           })
           _this.$el.html(template)
+          _this.afterRender();
         }
       });
+    },
+
+    afterRender: function() {
+      var code = null;
+      $('pre').addClass('prettyprint').each(function(idx, el){
+        code = el.firstChild;
+        code.innerHTML = prettify.prettyPrintOne(code.innerHTML);
+      });
     }
+
   });
 
   return PostsIndex;
