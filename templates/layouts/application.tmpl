@@ -39,7 +39,7 @@
       <div class="post">
         <div class="page-header">
           <h1><%= post.get("title") %></h1>
-          <h5><%= post.get("date") %></h5>
+          <small><%= post.get("date") %></small>
         </div>
         <% _.each(post.get('sections'), function (section) { %>
           <%= section %>

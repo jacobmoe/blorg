@@ -32,7 +32,7 @@ define([
 
     afterRender: function() {
       var code = null;
-      $('pre').addClass('prettyprint').each(function(idx, el){
+      $('pre.code').addClass('prettyprint').each(function(idx, el){
         code = el.firstChild;
         code.innerHTML = prettify.prettyPrintOne(code.innerHTML);
       });

@@ -73,12 +73,16 @@ func appendSections(sections []string, nodeSection []string) []string {
 		r, _ := regexp.Compile(`(?s)(\#\+BEGIN_SRC)\ ([a-zA-Z]*)(.*)(\#\+END_SRC)`)
 		submatches := r.FindStringSubmatch(s)
 
+		tableReg, _ := regexp.Compile(`(?s)\A\s*\|.*`)
+
 		// if section is a code block that is structured correctly,
-		// we will find a match plus exactly 4 sub-matches
+		// we will find a match with exactly 4 sub-matches
 		if len(submatches) == 5 {
 			lang := strings.TrimSpace("lang-" + submatches[2])
-			html := "<pre class=\"" + lang + "\"><code>" + strings.TrimSpace(submatches[3]) + "</code></pre>"
+			html := "<pre class=\"code " + lang + "\"><code>" + strings.TrimSpace(submatches[3]) + "</code></pre>"
 			sections = append(sections, html)
+		} else if tableReg.MatchString(s) {
+			sections = append(sections, AsciiTableToHtml(s))
 		} else {
 			section := blackfriday.MarkdownCommon([]byte(s))
 			sections = append(sections, string(section))
