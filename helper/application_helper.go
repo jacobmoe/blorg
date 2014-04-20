@@ -1,6 +1,7 @@
 package helper
 
 import "github.com/jacobmoe/gorg"
+import "github.com/jacobmoe/blorg/controller/api"
 import "path/filepath"
 import "strings"
 import "regexp"
@@ -25,7 +26,7 @@ func Application() map[string]interface{} {
 }
 
 func sectionTitles() []string {
-	inPath, _ := filepath.Abs("example_files/example.org")
+	inPath, _ := filepath.Abs(api.OrgFilePath)
 	tree := gorg.TreeFromFile(inPath)
 	var sectionTitles []string
 

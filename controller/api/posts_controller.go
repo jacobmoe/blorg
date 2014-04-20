@@ -11,7 +11,7 @@ import (
 )
 
 func PostIndex(args martini.Params, render render.Render) {
-	inPath, _ := filepath.Abs("example_files/example.org")
+	inPath, _ := filepath.Abs(OrgFilePath)
 
 	tree := gorg.TreeFromFile(inPath)
 

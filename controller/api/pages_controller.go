@@ -6,14 +6,11 @@ import (
 	"github.com/jacobmoe/gorg"
 	// "github.com/martini-contrib/render"
 	"github.com/jacobmoe/render"
-	"path/filepath"
 	"strconv"
 )
 
 func PageIndex(render render.Render) {
-	inPath, _ := filepath.Abs("example_files/example.org")
-
-	tree := gorg.TreeFromFile(inPath)
+	tree := gorg.TreeFromFile(OrgFilePath)
 
 	pages := model.PagesFromTree(tree)
 
@@ -21,9 +18,7 @@ func PageIndex(render render.Render) {
 }
 
 func PageShow(args martini.Params, render render.Render) {
-	inPath, _ := filepath.Abs("example_files/example.org")
-
-	tree := gorg.TreeFromFile(inPath)
+	tree := gorg.TreeFromFile(OrgFilePath)
 
 	pages := model.PagesFromTree(tree)
 
