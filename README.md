@@ -1,10 +1,9 @@
 Blorg
 =====
 
-_Blog-Org_ 
+_Blog_ + _Org_ 
 
-A simple [Backbone](http://backbonejs.org/) site served by a Go / [Martini](https://github.com/go-martini/martini) back-end. 
-All content is managed with an emacs [org-mode](http://orgmode.org/) file.
+A Go / [Martini](https://github.com/go-martini/martini) application that parses an emacs [org-mode](http://orgmode.org/) file and serves it as json to a [Backbone](http://backbonejs.org/) front-end.
 
 ## .org file 
 
@@ -34,7 +33,7 @@ Standard markdown - implemented with [blackfriday](https://github.com/russross/b
 The org-mode code block is used rather than the usual markdown syntax. 
 Code is nested between #+BEGIN_SRC and #+END_SRC.
 
-```
+``` go
 #+BEGIN_SRC go
 
 package example
@@ -50,7 +49,7 @@ func saySomething() {
 
 #### Tables
 
-If the first character of a line is a pipe, it will be interpreted as a table, both by org-mode and blorg. Org-mode tables are super cool. 
+If the first character of a line is a pipe, it will be interpreted as a table, both by org-mode and blorg. Org-mode tables are super cool, FYI. 
 
 ```
 |   col1 |      col2 |  col3 |
@@ -83,12 +82,11 @@ Becomes:
 
 - When there is a single page (one single-asterisk headline), pages are the two-asterisk headlines nested under it. Could be a feature?
 - If the last line of the file is a table, that table is ignored. This is an issue in `appendSections`, which needs to be cleaned up anyway. 
-- Each list item rendered as a new list. This needs to be fixed in [gorg](https://github.com/jacobmoe/gorg).
+- Each list item renders as a new list. This needs to be fixed in [gorg](https://github.com/jacobmoe/gorg).
 - Figure out a publishing system. Maybe use Dropbox.
 - Cache parsed .org file in a .json file on publish. 
 - Should generalize posts to allow deeper org-mode structures.
 - The Backbone `Page` view should be broken up into collections of `Posts`.
-- Site title and header should come from org filename. 
 - Cleanup error handling. 
 - Test!
 - Styles!

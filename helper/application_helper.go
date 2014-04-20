@@ -1,14 +1,21 @@
 package helper
 
-import "github.com/jacobmoe/gorg"
-import "github.com/jacobmoe/blorg/controller/api"
-import "path/filepath"
-import "strings"
-import "regexp"
+import (
+	"github.com/jacobmoe/blorg/controller/api"
+	"github.com/jacobmoe/gorg"
+	"path/filepath"
+	"regexp"
+	"strings"
+)
 
 func Application() map[string]interface{} {
 
 	helper := make(map[string]interface{})
+
+	helper["siteTitle"] = func() string {
+		ext := filepath.Ext(api.OrgFileName)
+		return strings.Replace(api.OrgFileName, ext, "", -1)
+	}
 
 	helper["sectionTitles"] = func() []string {
 		return sectionTitles()
@@ -20,6 +27,16 @@ func Application() map[string]interface{} {
 
 	helper["plus1"] = func(i int) int {
 		return i + 1
+	}
+
+	helper["titleize"] = func(s string) string {
+		r := regexp.MustCompile("[_-]")
+
+		return r.ReplaceAllLiteralString(strings.Title(s), " ")
+	}
+
+	helper["upCase"] = func(s string) string {
+		return strings.ToUpper(s)
 	}
 
 	return helper
