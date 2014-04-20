@@ -87,6 +87,7 @@ Becomes:
 - Cache parsed .org file in a .json file on publish. 
 - Should generalize posts to allow deeper org-mode structures.
 - The Backbone `Page` view should be broken up into collections of `Posts`.
+- Site title and header should come from org filename. 
 - Cleanup error handling. 
 - Test!
 - Styles!
