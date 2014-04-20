@@ -25,7 +25,6 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
 ![](http://i.imgur.com/XkegQbZ.gif)
 ** contact
 - [contact me](http://example.com)
-- etc
 * Code
 ** go examples
 #+BEGIN_SRC go
@@ -54,6 +53,7 @@ end
 
 #+END_SRC
 * Table
+
 
 |   col1 |      col2 |  col3 | col4 | col5 | col6 |
 |--------+-----------+-------+------+------+------|

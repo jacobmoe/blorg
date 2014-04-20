@@ -25,7 +25,7 @@ func Application() map[string]interface{} {
 }
 
 func sectionTitles() []string {
-	inPath, _ := filepath.Abs("test_files/test.org")
+	inPath, _ := filepath.Abs("example_files/example.org")
 	tree := gorg.TreeFromFile(inPath)
 	var sectionTitles []string
 
