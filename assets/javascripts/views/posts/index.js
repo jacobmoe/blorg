@@ -4,8 +4,8 @@ define([
   'backbone',
   'prettify',
   'collections/posts_collection',
-  'templates/posts/index'
-], function($, _, Backbone, prettify, PostsCollection, template) {
+  'text!templates/posts.html'
+], function($, _, Backbone, prettify, PostsCollection, postsTemplate) {
 
   var PostsIndex = Backbone.View.extend({
     el: '.posts',
@@ -21,7 +21,7 @@ define([
 
       posts.fetch({
         success: function (posts) {
-          var template = _.template($('#posts-template').html(), {
+          var template = _.template(postsTemplate, {
             posts: posts.models
           })
           _this.$el.html(template)

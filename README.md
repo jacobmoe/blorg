@@ -24,6 +24,8 @@ the body of a page without post titles.
 
 For now, content deeper than 3 asterisks is ignored. 
 
+The site title is taken from the .org filename. 
+
 ### Markdown
 
 Standard markdown - implemented with [blackfriday](https://github.com/russross/blackfriday) - can be used in a post's body. Some exceptions:
@@ -31,7 +33,7 @@ Standard markdown - implemented with [blackfriday](https://github.com/russross/b
 #### Code blocks
 
 The org-mode code block is used rather than the usual markdown syntax. 
-Code is nested between #+BEGIN_SRC and #+END_SRC.
+Code is nested between `#+BEGIN_SRC` and `#+END_SRC`.
 
 ``` go
 #+BEGIN_SRC go
@@ -80,9 +82,10 @@ Becomes:
 
 ## Bugs/Todo
 
-- When there is a single page (one single-asterisk headline), pages are the two-asterisk headlines nested under it. Could be a feature?
+- When the org file contains one single-asterisk headline, pages come from the two-asterisk headlines nested under it. Could be a feature?
 - If the last line of the file is a table, that table is ignored. This is an issue in `appendSections`, which needs to be cleaned up anyway. 
 - Each list item renders as a new list. This needs to be fixed in [gorg](https://github.com/jacobmoe/gorg).
+- Should do something with keywords like TODO. Needs to be added to gorg. 
 - Figure out a publishing system. Maybe use Dropbox.
 - Cache parsed .org file in a .json file on publish. 
 - Should generalize posts to allow deeper org-mode structures.

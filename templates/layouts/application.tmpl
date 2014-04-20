@@ -19,7 +19,7 @@
 <body>
 
   <div class="header">
-    <h1>{{siteTitle | titleize | upCase}}</h1>
+    <h1>{{siteTitle | titleize | toUpper}}</h1>
   </div>
 
   <div class="container-fluid">
@@ -33,20 +33,6 @@
       </div>
     </div>
   </div>
-
-  <script type="text/template" id="posts-template">
-    <% _.each(posts, function (post) { %>
-      <div class="post">
-        <div class="page-header">
-          <h1><%= post.get("title") %></h1>
-          <small><%= post.get("date") %></small>
-        </div>
-        <% _.each(post.get('sections'), function (section) { %>
-          <%= section %>
-        <% }); %>
-      </div>
-    <% }); %>
-  </script>
  
 </body>
 </html>

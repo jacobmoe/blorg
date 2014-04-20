@@ -35,7 +35,7 @@ func Application() map[string]interface{} {
 		return r.ReplaceAllLiteralString(strings.Title(s), " ")
 	}
 
-	helper["upCase"] = func(s string) string {
+	helper["toUpper"] = func(s string) string {
 		return strings.ToUpper(s)
 	}
 
