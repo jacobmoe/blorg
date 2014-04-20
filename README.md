@@ -81,8 +81,9 @@ Becomes:
 
 ## Bugs/Todo
 
-- When there is a single page (one single-asterisk headline), pages become the two-asterisk healines nested under it. Could be a feature?
+- When there is a single page (one single-asterisk headline), pages are the two-asterisk headlines nested under it. Could be a feature?
 - If the last line of the file is a table, that table is ignored. This is an issue in `appendSections`, which needs to be cleaned up anyway. 
+- Each list item rendered as a new list. This needs to be fixed in [gorg](https://github.com/jacobmoe/gorg).
 - Figure out a publishing system. Maybe use Dropbox.
 - Cache parsed .org file in a .json file on publish. 
 - Should generalize posts to allow deeper org-mode structures.
