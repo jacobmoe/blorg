@@ -4,7 +4,7 @@ define([
   'backbone',
   'prettify',
   'collections/posts_collection',
-  'text!templates/posts.html'
+  'text!templates/posts/index/posts.html'
 ], function($, _, Backbone, prettify, PostsCollection, postsTemplate) {
 
   var PostsIndex = Backbone.View.extend({
@@ -18,13 +18,10 @@ define([
       var _this = this;
 
       var posts = new PostsCollection([], {page_id: this.page_id});
-
       posts.fetch({
         success: function (posts) {
-          var template = _.template(postsTemplate, {
-            posts: posts.models
-          })
-          _this.$el.html(template)
+          var template = _.template(postsTemplate, {posts: posts.models});
+          _this.$el.html(template);
           _this.afterRender();
         }
       });
@@ -36,7 +33,15 @@ define([
         code = el.firstChild;
         code.innerHTML = prettify.prettyPrintOne(code.innerHTML);
       });
+
+      this.$el.on('click', '.post', this.openPost);
+    },
+
+    openPost: function () {
+      $(this).toggleClass('active');
     }
+
+
 
   });
 

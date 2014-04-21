@@ -1,16 +1,14 @@
 define([
-  'jquery',
-  'underscore',
+  'jquery', 
+  'underscore', 
   'backbone',
   'views/posts/index',
-  'views/posts/show'
-], function($, _, Backbone, PostsIndexView, PostsShowView, SidebarView) {
+], function($, _, Backbone, PostsIndexView) {
   
   var AppRouter = Backbone.Router.extend({
     routes: {
       ''               : 'home',
       'pages/:id/:slug': 'postsIndex',
-      'posts/:id'      : 'postsShow', 
       '*actions'       : 'defaultAction'
     }
   });
@@ -28,13 +26,6 @@ define([
       postsIndexView.render();
     });
     
-    app_router.on('route:postsShow', function(params){
-      console.log("POSTS SHOW ====> ", params);
-
-      var postsShowView = new PostsShowView();
-      postsShowView.render();
-    });
-
     app_router.on('route:defaultAction', function (params) {
       console.log("DEFAULT ACTION ====> ", params);
        // We have no matching route, lets display the home page 

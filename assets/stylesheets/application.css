@@ -22,6 +22,38 @@ img.org-unicorn {
   width: 90px;
 }
 
+
+div.posts div.post {
+  padding: 20px;
+  margin: 20px 0;
+}
+
+div.posts div.post div.post-header {
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+div.posts div.post div.post-header div.title {
+  font-size: 25px;
+}
+
+div.posts div.post div.post-header div.date {
+  font-size: 12px;
+  float: right;
+  margin-top: 20px;
+}
+
+/*div.posts div.post div.post-body {
+  display: none;
+}
+*/
+
+div.posts div.post.active div.post-body {
+  display: block;
+}
+
 div.posts div.post img {
   max-width: 100%;
 }

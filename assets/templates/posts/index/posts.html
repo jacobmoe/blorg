@@ -1,0 +1,13 @@
+<% _.each(posts, function (post) { %>
+  <div class="post">
+    <div class="post-header">
+      <div class="date"><%= post.get("date") %></div>
+      <div class="title"><%= post.get("title") %></div>
+    </div>
+    <div class="post-body">
+      <% _.each(post.get('sections'), function (section) { %>
+        <%= section %>
+      <% }); %>
+    </div>
+  </div>
+<% }); %>
