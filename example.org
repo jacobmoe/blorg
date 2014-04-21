@@ -20,13 +20,14 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
 
 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est labo
-* About
-** elephant gifs
+* Misc
+** elephants
 ![](http://i.imgur.com/XkegQbZ.gif)
-** contact
+** contacts
 - [contact me](http://example.com)
 * Code
 ** go examples
+
 #+BEGIN_SRC go
 
 package example
@@ -54,19 +55,19 @@ end
 #+END_SRC
 * Table
 
+|   col1 |      col2 |  col3 | col4 | col5 | col6 |       sum |
+|--------+-----------+-------+------+------+------+-----------|
+|   9987 |        89 |   897 |  789 |  789 |  978 |     13529 |
+|    789 |       789 |   978 |  978 |  789 |  789 |      5112 |
+| 789789 | 789897789 | 98789 |  789 |  789 |  789 | 790788734 |
+|    089 |       089 |   890 |  890 |  890 |  890 |      3738 |
+|    890 |       890 |   809 |  809 |  908 |  890 |      5196 |
+|    089 |       890 |   890 |  908 |  890 |  908 |      4575 |
+|    089 |       908 |   089 |  908 |   90 |  987 |      3071 |
+|     89 |       890 |    0- |  90- |   -9 |  9-0 |    #ERROR |
+|    9-0 |       -90 |   90- |  890 |    9 |  978 |    #ERROR |
+|    897 |        90 |   890 |  890 |  089 |  890 |      3746 |
+|    890 |       890 |   890 |  890 |  890 |  890 |      5340 |
 
-|   col1 |      col2 |  col3 | col4 | col5 | col6 |
-|--------+-----------+-------+------+------+------|
-|   9987 |        89 |   897 |  789 |  789 |  978 |
-|    789 |       789 |   978 |  978 |  789 |  789 |
-| 789789 | 789897789 | 98789 |  789 |  789 |  789 |
-|    089 |       089 |   890 |  890 |  890 |  890 |
-|    890 |       890 |   809 |  809 |  908 |  890 |
-|    089 |       890 |   890 |  908 |  890 |  908 |
-|    089 |       908 |   089 |  908 |   90 |  987 |
-|     89 |       890 |    0- |  90- |   -9 |  9-0 |
-|    9-0 |       -90 |   90- |  890 |    9 |  978 |
-|    897 |        90 |   890 |  890 |  089 |  890 |
-|    890 |       890 |   890 |  890 |  890 |  890 |
 
 
